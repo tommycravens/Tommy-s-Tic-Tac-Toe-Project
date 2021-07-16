@@ -1,1 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
+
+$black: #000;
+body {background-color: #9BA17B}
+
+.border {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}
+
+#sign-up-form {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px
+
+}
+
+#sign-in-form {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px
+}
+#sign-out-button{
+  border: 5px
+}
