@@ -1,6 +1,6 @@
 "use strict"
 
-const store = require("./../store")
+const store = require("./store")
 
 const onSignUpSuccess = (response) => {
   $("#message").text(`Thank you for signing up ${response.user.email}`)
@@ -27,10 +27,14 @@ const onSignOutSuccess = (response) => {
   $("#sign-up-form").show()
   $("#sign-out").hide()
 }
+const onCreateGameSuccess = () => {
+
+}
 
 module.exports = {
   onSignUpSuccess,
   onFailure,
   onSignInSuccess,
-  onSignOutSuccess
+  onSignOutSuccess,
+  onCreateGameSuccess
 }
