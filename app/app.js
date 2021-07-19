@@ -10,5 +10,5 @@ $(() => {
   $("#sign-up-form").on("submit", authEvents.onSignUp)
   $("#sign-in-form").on("submit", authEvents.onSignIn)
   $("#sign-out").on("click", authEvents.onSignOut)
-  $("create-game").on("click", authEvents.createGame)
+  $("create-game").on("click", authEvents.onCreateGame)
 })

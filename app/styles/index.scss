@@ -6,7 +6,7 @@ body {background-color: #9BA17B}
 .border {
   border: 3px solid $black;
   margin: 20px;
-  padding: 20px;
+  padding: 20px
 }
 
 #sign-up-form {
@@ -23,4 +23,10 @@ body {background-color: #9BA17B}
 }
 #sign-out-button{
   border: 5px
+}
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
