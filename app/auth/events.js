@@ -40,12 +40,12 @@ const onSignIn = function (event) {
 }
 const onSignOut = function () {
   api.signOut()
-  .then(ui.signOutSuccess)
+  .then(ui.onSignOutSuccess)
   .catch(ui.onFailure)
 }
 const onCreateGame = function () {
   api.createGame()
-  .then(ui.createGameSuccess)
+  .then(ui.onCreateGameSuccess)
   .catch(ui.onFailure)
 }
 

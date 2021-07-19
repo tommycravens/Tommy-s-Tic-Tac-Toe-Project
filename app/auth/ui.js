@@ -13,7 +13,7 @@ const onFailure = (error) => {
 }
 const onSignInSuccess = (response) => {
   $("#message").text(`Sign-in was successful ${response.user.email}`)
-  store.token = response.user.token;
+  store.token = response.user.token
   $("#sign-in-form").trigger("reset")
   $("#sign-in-form").hide()
   $("#sign-up-form").hide()
@@ -27,7 +27,11 @@ const onSignOutSuccess = (response) => {
   $("#sign-up-form").show()
   $("#sign-out").hide()
 }
-const onCreateGameSuccess = () => {
+const onCreateGameSuccess = (response) => {
+  $('#message').text(`Create-game was successful`)
+  store.game = response.game
+  console.log(store.game)
+
 
 }
 

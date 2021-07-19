@@ -29,7 +29,9 @@ const createGame = function () {
   return $.ajax({
     url: "https://tic-tac-toe-api-development.herokuapp.com/create-game",
     method: "POST",
-    data
+    headers: {
+      Authorization: "Bearer " + store.token
+    }
   })
 }
 

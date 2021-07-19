@@ -5,10 +5,10 @@ curl "https://tic-tac-toe-api-development.herokuapp.com/create-game" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
-  --data '{
-    "credentials": {
-
-    }
-  }'
+  --header "Authorization: Bearer ${TOKEN}"
+  --data '{}'
 
 echo
+
+
+#token creates the game for the signed in person. The empty object is my game board.
