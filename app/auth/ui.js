@@ -16,13 +16,14 @@ const onSignInSuccess = (response) => {
   store.token = response.user.token
   $("#sign-in-form").trigger("reset")
   $("#create-game").css("display", "block")
-  $("#create-game").css("display", "block")
+  $("#create-game-header").css("display", "block")
   $("#sign-out").css('display', 'block')
   $("#sign-out-header").css('display', 'block')
   $("#sign-in-form").css('display', 'none')
   $("#sign-in-header").css('display', 'none')
   $("#sign-up-form").css("display", "none")
   $("#sign-up-header").css("display", "none")
+  $("#create-game-header").css("display", "block")
 }
 const onSignOutSuccess = () => {
   $("#message").text(`Sign-out was successful`)
@@ -40,6 +41,9 @@ const onCreateGameSuccess = (response) => {
   $('#message').text(`Goodluck!`)
   store.game = response.game
   console.log(store.game)
+  $("#create-game-header").css('display', 'block')
+  //$("#selection-box").css('display', 'block')
+  //$(".game-content").css('display', 'block')
   //$("#game-screen").show()
 }
 const onFailure = (error) => {
