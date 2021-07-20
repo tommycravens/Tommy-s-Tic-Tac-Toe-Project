@@ -1,5 +1,5 @@
 "use strict"
-
+$("#game-board").hide()
 const store = require("./store")
 
 const onSignUpSuccess = (response) => {
@@ -23,28 +23,34 @@ const onSignInSuccess = (response) => {
   $("#sign-in-header").css('display', 'none')
   $("#sign-up-form").css("display", "none")
   $("#sign-up-header").css("display", "none")
-  $("#create-game-header").css("display", "block")
+  $("#create-game-header").css('display', 'block')
+  $("#selection-box-header").css('display', 'block')
+  $("#game-board").css('display', 'block')
+  $("#game-content").css('display', 'block')
 }
 const onSignOutSuccess = () => {
   $("#message").text(`Sign-out was successful`)
   $("#sign-out").trigger("reset")
-   $("#sign-in-form").css('display', 'block')
-   $("#sign-in-header").css('display', 'block')
-   $("#sign-up-form").css('display', 'block')
-   $("#sign-up-header").css('display', 'block')
-   $("#sign-out").css('display', 'none')
-   $("#sign-out-header").css('display', 'none')
-   $("#create-game").css('display', 'none')
-   $("#create-game-header").css('display', 'none')
+  $("#sign-in-form").css('display', 'block')
+  $("#sign-in-header").css('display', 'block')
+  $("#sign-up-form").css('display', 'block')
+  $("#sign-up-header").css('display', 'block')
+  $("#sign-out").css('display', 'none')
+  $("#sign-out-header").css('display', 'none')
+  $("#create-game").css('display', 'none')
+  $("#create-game-header").css('display', 'none')
+  $("#selection-box-header").css('display', 'none')
+  $("#game-board").css('display', 'none')
 }
 const onCreateGameSuccess = (response) => {
-  $('#message').text(`Goodluck!`)
-  store.game = response.game
-  console.log(store.game)
+  $("#message").text(`Goodluck!`);
+  store.game = response.game;
+  console.log(store.game);
   $("#create-game-header").css('display', 'block')
-  //$("#selection-box").css('display', 'block')
-  //$(".game-content").css('display', 'block')
-  //$("#game-screen").show()
+  $(".playerX").css('display', 'block')
+  $(".playerO").css('display','block')
+  $("#game-board").css('display', 'block')
+  $("#game-content").css('display', 'block')
 }
 const onFailure = (error) => {
   console.log(`Error, status: ${error.status}`)
