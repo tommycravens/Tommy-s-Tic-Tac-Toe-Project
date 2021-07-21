@@ -57,7 +57,7 @@ const onCreateGameSuccess = (response) => {
   $("#create-game-header").css('display', 'block')
   $(".playerX").css('display', 'block')
   $(".playerO").css('display','block')
-  $(".game-board").css('display', 'block')
+  $(".game-board").css('display', 'grid')
   $("#game-content").css('display', 'block')
   $("#restart").css('display','block')
   $(".cell").css('display','block')

@@ -49,6 +49,14 @@ const onCreateGame = function (event) {
   .then(ui.onCreateGameSuccess)
   .catch(ui.onFailure)
 }
+// const updateGame = function () {
+//   console.log(store.token)
+//   return $.ajax({
+//     url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + store.game._id,
+//     method: 'PATCH',
+
+//   })
+// }
 
 
 

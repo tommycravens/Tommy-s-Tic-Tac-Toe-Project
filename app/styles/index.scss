@@ -117,7 +117,9 @@ h2 {
   padding: 50px;
   border-radius: 25px;
   grid-gap: 15px;
-  margin-top: 50px
+  margin-top: 50px;
+  justify-content: center;
+  align: center
 }
 //height and width need to be the same because you are trying to make a box. Try and pick a good size.
 // vh and vw measure the percentage of height and width of the viewport respectively. I looked at this question from Stack Overflow, but it made the units look even more similar. vw and vh are a percentage of the window width and height, respectively: 100vw is 100% of the width, 80vw is 80%, etc.
@@ -129,9 +131,10 @@ h2 {
   display: flex;
   border: 2px solid;
   border-color: black;
-  //justify-content: center;
-  //align-items: center;
-  line-height: 100px
+  justify-content: center;
+  align-items: center;
+  line-height: 100px;
+  border-radius: 10px
 }
 
 .selection-box {
@@ -157,6 +160,19 @@ h2 {
   border-radius: 10px;
   color: #8da5ae;
   text-shadow: 3px 3px #000000
+}
+.row.row-cols-3 {
+  display: flex;
+  justify-content: center;
+  align: center;
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px
+
+
 }
 #restart {
   display: flex;
