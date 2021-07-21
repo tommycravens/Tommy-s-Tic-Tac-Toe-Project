@@ -1,32 +1,231 @@
+
 @import '~bootstrap/scss/bootstrap';
-
 $black: #000;
-body {background-color: #9BA17B}
+body {
+  background-color: #9BA17B;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  justify-content: center
 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
 .border {
   border: 3px solid $black;
-  margin: 20px;
-  padding: 20px
+  margin: 0;
+  padding: 0
 }
 
 #sign-up-form {
-  border: 3px solid $black;
-  margin: 20px;
-  padding: 20px
-
+  border: .5px solid $black;
+  margin: 15px;
+  padding: 15px;
+  background-color: #FA8072;
+  border-radius: 10px
+}
+#sign-up {
+  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid $black;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #8da5ae;
+  color: #FA8072;
+  font-weight: bold;
+  font-size: 85%;
+  text-shadow: 4px 4px #000000
 }
 
 #sign-in-form {
-  border: 3px solid $black;
-  margin: 20px;
-  padding: 20px
+  border: .5px solid $black;
+  margin: 15px;
+  padding: 15px;
+  background-color: #FA8072; 
+  border-radius: 10px
 }
-#sign-out-button{
-  border: 5px
+#sign-in {
+  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid $black;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #8da5ae;
+  color: #FA8072;
+  font-weight: bold;
+  font-size: 85%;
+  text-shadow: 4px 4px #000000
 }
+#sign-out {
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid $black;
+  border-radius: 2px;
+  text-align: center;
+  display: center;
+  background-color: #8da5ae;
+  color: #FA8072;
+  font-weight: bold;
+  text-shadow: 3px 3px #000000;
+  font-size: 95%
+}
+#sign-out-header {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #FA8072;
+  border: .5px solid $black;
+  border-radius: 10px;
+  color: #8da5ae;
+  text-shadow: 3px 3px #000000
+}
+
+// I want to add better fonts here, but this was just vscode already and easy to add in with out importing any font families from google.
 h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #8da5ae;
+  text-shadow: 4px 4px #000000;
+  display: flex;
+  justify-content: center;
+  align: center
 }
 h2 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #8da5ae;
+  text-shadow: 4px 4px #000000;
+  display: flex;
+  justify-content: center;
+  align: center
+}
+
+.game-board {
+  background-color: #FA8072;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 500px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 25px;
+  grid-gap: 15px;
+  margin-top: 50px
+}
+//height and width need to be the same because you are trying to make a box. Try and pick a good size.
+// vh and vw measure the percentage of height and width of the viewport respectively. I looked at this question from Stack Overflow, but it made the units look even more similar. vw and vh are a percentage of the window width and height, respectively: 100vw is 100% of the width, 80vw is 80%, etc.
+// not totally sure what is better but both seem to be able to size my boxes.
+.cell {
+  height: 100px;
+  width: 100px;
+  background-color: #8da5ae;
+  display: flex;
+  border: 2px solid;
+  border-color: black;
+  //justify-content: center;
+  //align-items: center;
+  line-height: 100px
+}
+
+.selection-box {
+  display: flex;
+  justify-content: center;
+  align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid $black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #8da5ae
+}
+#selection-box-header {
+  display: flex;
+  justify-content: center;
+  align: center;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #FA8072;
+  border: .5px solid $black;
+  border-radius: 10px;
+  color: #8da5ae;
+  text-shadow: 3px 3px #000000
+}
+#restart {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid $black;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #8da5ae;
+  color: #FA8072;
+  font-weight: bold;
+  font-size: 125%;
+  text-shadow: 3px 3px #000000
+
+}
+#create-game-header {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #FA8072;
+  border: .5px solid $black;
+  border-radius: 10px;
+  color: #8da5ae;
+  text-shadow: 3px 3px #000000
+}
+#create-game {
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid $black;
+  border-radius: 2px;
+  text-align: center;
+  display: center;
+  background-color: #8da5ae;
+  color: #FA8072;
+  font-weight: bold;
+  font-size: 100%;
+  text-shadow: 3px 3px #000000
+  
+}
+.playerX {
+ display: flex;
+ justify-content: center;
+ margin: 10px;
+ padding: 10px;
+ border: 1px solid $black;
+ border-radius: 2px;
+ text-align: center;
+ background-color: #FA8072;
+ color: #8da5ae;
+ font-weight: 700;
+ font-size: 85%;
+ text-shadow: 3px 3px #000000
+}
+.playerO {
+ display: flex;
+ justify-content: center;
+ margin: 10px;
+ padding: 10px;
+ border: 1px solid $black;
+ border-radius: 2px;
+ text-align: center;
+ background-color: #FA8072;
+ color: #8da5ae;
+ font-weight: 700;
+ font-size: 85%;
+ text-shadow: 3px 3px #000000
 }

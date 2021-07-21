@@ -1,5 +1,6 @@
 "use strict"
-$("#game-board").hide()
+// might take out the line under this because I have been using the css to do this action instead. This was just a quick fix.
+$(".game-board").hide()
 const store = require("./store")
 
 const onSignUpSuccess = (response) => {
@@ -23,10 +24,12 @@ const onSignInSuccess = (response) => {
   $("#sign-in-header").css('display', 'none')
   $("#sign-up-form").css("display", "none")
   $("#sign-up-header").css("display", "none")
-  $("#create-game-header").css('display', 'block')
-  $("#selection-box-header").css('display', 'block')
-  $("#game-board").css('display', 'block')
-  $("#game-content").css('display', 'block')
+  // $("#create-game-header").css('display', 'block')
+  // $("#selection-box-header").css('display', 'block')
+  // $(".game-board").css('display', 'block')
+  // $("#game-content").css('display', 'block')
+  // $("#restart").css('display','block')
+  // $(".cell").css('display','block')
 }
 const onSignOutSuccess = () => {
   $("#message").text(`Sign-out was successful`)
@@ -40,8 +43,13 @@ const onSignOutSuccess = () => {
   $("#create-game").css('display', 'none')
   $("#create-game-header").css('display', 'none')
   $("#selection-box-header").css('display', 'none')
-  $("#game-board").css('display', 'none')
+  $(".game-board").css('display', 'none')
+  $("#game-content").css('display', 'none')
+  $("#restart").css('display','none')
+  $(".cell").css('display','none')
+  $(".selection-box").css('display', 'none')
 }
+
 const onCreateGameSuccess = (response) => {
   $("#message").text(`Goodluck!`);
   store.game = response.game;
@@ -49,8 +57,12 @@ const onCreateGameSuccess = (response) => {
   $("#create-game-header").css('display', 'block')
   $(".playerX").css('display', 'block')
   $(".playerO").css('display','block')
-  $("#game-board").css('display', 'block')
+  $(".game-board").css('display', 'block')
   $("#game-content").css('display', 'block')
+  $("#restart").css('display','block')
+  $(".cell").css('display','block')
+  $("#selection-box-header").css('display', 'block')
+  $(".selection-box").css('display', 'block')
 }
 const onFailure = (error) => {
   console.log(`Error, status: ${error.status}`)

@@ -20,7 +20,7 @@
           <input name="credentials[password]" type="password">
           <label>Password Confirmation</label>
           <input name="credentials[password_confirmation]" type="password">
-          <input type="submit" value="Sign Up">
+          <input id="sign-up" type="submit" value="Sign Up">
         </form>
         <h2 id="sign-in-header" style="display:block">Back Again? See if your skills have sharpened!</h2>
         <form id="sign-in-form" style="display:block">
@@ -28,7 +28,7 @@
           <input name="credentials[email]" type="email">
           <label>Password</label>
           <input name="credentials[password]" type="password">
-          <input type="submit" value="Sign In">
+          <input id="sign-in" type="submit" value="Sign In">
         </form>
         <h2 id="sign-out-header" style="display:none">Want to Sign Out?</h2>
         <button id="sign-out" type="button" style="display:none">
@@ -36,24 +36,38 @@
         </button>
 
 <!-- Start of game-board, selection box, start game button  -->
-        <div class="selection-box">
-          <h2 id="selection-box-header" style="display:none"> Tommy's Tic-Tac-Toe Game</h2>
-          <div id="game-content" style="display:none">
-            <div class="title" style="display:none">Choose your side</div>
-            <div class="choices">
-              <button class="playerX" style="display:none">Player(X) </button>
-              <button class="playerO" style="display:none">Player(O) </button>
-            </div>
-          </div>
-        </div>
-
         <h2 id="create-game-header" style="display:none"> New Game! </h2>
         <button id="create-game" type="button" style="display:none" >
           START GAME
         </button>
+        <div class="selection-box" style="display:none">
+          <h2 id="selection-box-header" style="display:none"> Tommy's Tic-Tac-Toe Game</h2>
+          <div id="game-content" style="display:none">
+            <div class="title" style="display:none">Choose your side</div>
+            <div class="choices">
+              <button class="playerX" type= "button" style="display:none">Player(X) </button>
+              <button class="playerO" type="button" style="display:none">Player(O) </button>
+            </div>
+          </div>
+        </div>
 
-        <div id="game-board" style="display:none">
-          <div class="row row-cols-3">
+       
+        <button id="restart" style="display:none">Restart</button>
+
+        <div class="game-board" style="display:none">
+          <div data-cell-index="0" class="cell" style="display:none"></div>
+          <div data-cell-index="1" class="cell" style="display:none"></div>
+          <div data-cell-index="2" class="cell" style="display:none"></div>
+          <div data-cell-index="3" class="cell" style="display:none"></div>
+          <div data-cell-index="4" class="cell" style="display:none"></div>
+          <div data-cell-index="5" class="cell" style="display:none"></div>
+          <div data-cell-index="6" class="cell" style="display:none"></div>
+          <div data-cell-index="7" class="cell" style="display:none"></div>
+          <div data-cell-index="8" class="cell" style="display:none"></div>
+          </div>
+<!-- Can I make this box model easier? this listing out the long form here seems to be giving me trouble when I go to css and fix it. If I make them all one class name and affect them all at the same time and use the id tag to number them then I won't have to do as much css I think.  -->
+<!-- rough draft -->
+          <!-- <div class="row row-cols-3">
             <div class="col border-bottom border-end">0</div>
             <div class="col border-bottom border-end border-start">1</div>
             <div class="col border-bottom border-start">2</div>
@@ -64,8 +78,8 @@
             <div class="col border-start border-top border-end">7</div>
             <div class="col border-top border-start">8</div>
           </div>
-        </div>
-<!-- you are going to have to play with your divs until it looks right -->
+        </div> -->
+<!-- you are going to have to play with your divs until it looks right because they are super warped to the length of the page. The CSS for this has been a real pain in the butt. There has to be an easier way to class these.  -->
         <!-- <div class="game-components">
           <div class="game-turns">
             <div class="players">
