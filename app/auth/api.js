@@ -48,6 +48,16 @@ const playGame = (game) => {
     }
   })
 }
+// restartGame = (game) => {
+  // return $.ajax ({
+    // url: config.apiUrl + '/games/' + store.game._id,
+    //method: 'PATCH',
+    // data,
+    //headers: {
+      //Authorization:
+    //}
+    //   })
+    // }
 //store with the token we created in curl
 module.exports = {
   signUp,

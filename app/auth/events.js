@@ -63,7 +63,7 @@ const onPlayGame = function (event) {
   // .then(ui.onPlayGameSuccess)
   // .catch(ui.onFailure)
 }
-
+//const onRestartGame {}
 
 
 
@@ -73,4 +73,5 @@ module.exports = {
   onSignOut,
   onCreateGame,
   onPlayGame
+  //onRestartGame
 }
