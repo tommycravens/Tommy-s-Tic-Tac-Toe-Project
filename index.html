@@ -43,13 +43,14 @@
             <div class="choices">
               <button class="playerX" type= "button" style="display:none">Player(X) </button>
               <button class="playerO" type="button" style="display:none">Player(O) </button>
+              <div class="game-status"><span>Current move:</span> x is next.</div>
               <button id="restart" style="display:none">Restart</button>
             </div>
           </div>
         </div>
 
 
-        <div class="game-board" style="display:none">
+        <div id="game-board" style="display:none">
           <div class="row row-cols-3">
           <div data-cell-index="0" class="cell" style="display:none"></div>
           <div data-cell-index="1" class="cell" style="display:none"></div>

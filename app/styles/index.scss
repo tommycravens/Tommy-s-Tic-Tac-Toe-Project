@@ -40,6 +40,9 @@ body {
   font-size: 85%;
   text-shadow: 4px 4px #000000
 }
+#sign-up:hover {
+  background-color: #9BA17B
+}
 
 #sign-in-form {
   border: .5px solid $black;
@@ -62,6 +65,9 @@ body {
   font-size: 85%;
   text-shadow: 4px 4px #000000
 }
+#sign-in:hover {
+  background-color: #9BA17B
+}
 #sign-out {
   margin: 10px;
   margin-top: 10px;
@@ -76,6 +82,9 @@ body {
   font-weight: bold;
   text-shadow: 3px 3px #000000;
   font-size: 95%
+}
+#sign-out:hover {
+  background-color: #FA8072
 }
 #sign-out-header {
   margin: 10px;
@@ -108,12 +117,16 @@ h2 {
   align: center
 }
 
-.game-board {
+#game-board {
   background-color: #FA8072;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: 500px;
+  flex-wrap: wrap;
+  width: 400px;
   margin: 50px auto;
+  margin-top: 50px auto;
+  margin-bottom: 50px auto;
+  margin-left: 50px auto;
+  margin-right: 50px auto;
   padding: 50px;
   border-radius: 25px;
   grid-gap: 15px;
@@ -138,14 +151,11 @@ h2 {
 }
 .row.row-cols-3 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align: center;
-  margin: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding: 10px
+  margin: auto 0;
+  padding: 10px auto
 }
 
 .selection-box {
@@ -191,7 +201,9 @@ h2 {
   font-weight: bold;
   font-size: 100%;
   text-shadow: 3px 3px #000000
-
+}
+#restart:hover {
+  background-color: #9BA17B
 }
 #create-game-header {
   margin: 20px;
@@ -219,7 +231,14 @@ h2 {
   font-weight: bold;
   font-size: 100%;
   text-shadow: 3px 3px #000000
-  
+}
+#create-game:hover {
+  background-color: #FA8072
+}
+.choices {
+  display: flex;
+  justify-content: center;
+  align: center
 }
 .playerX {
  display: flex;
@@ -235,6 +254,9 @@ h2 {
  font-size: 100%;
  text-shadow: 4px 4px #000000
 }
+.playerX:hover {
+  background-color: #9BA17B
+}
 .playerO {
  display: flex;
  justify-content: center;
@@ -248,4 +270,25 @@ h2 {
  font-weight: 700;
  font-size: 100%;
  text-shadow: 4px 4px #000000
+}
+.playerO:hover {
+  background-color: #9BA17B
+}
+.game-status {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid $black;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #FA8072;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 100%;
+  text-shadow: 4px 4px #000000
+}
+.game-status span {
+  color: #66FF00;
+  font-size: 110%
 }
