@@ -1,7 +1,7 @@
 "use strict"
 // might take out the line under this because I have been using the css to do this action instead. This was just a quick fix.
-$(".game-board").hide()
-const store = require("./store")
+$("#game-board").hide()
+const store = require("./../store")
 
 const onSignUpSuccess = (response) => {
   $("#message").text(`Thank you for signing up ${response.user.email}`)
@@ -26,7 +26,7 @@ const onSignInSuccess = (response) => {
   $("#sign-up-header").css("display", "none")
   // $("#create-game-header").css('display', 'block')
   // $("#selection-box-header").css('display', 'block')
-  // $(".game-board").css('display', 'block')
+  // $("#game-board").css('display', 'block')
   // $("#game-content").css('display', 'block')
   // $("#restart").css('display','block')
   // $(".cell").css('display','block')
@@ -43,7 +43,7 @@ const onSignOutSuccess = () => {
   $("#create-game").css('display', 'none')
   $("#create-game-header").css('display', 'none')
   $("#selection-box-header").css('display', 'none')
-  $(".game-board").css('display', 'none')
+  $("#game-board").css('display', 'none')
   $("#game-content").css('display', 'none')
   $("#restart").css('display','none')
   $(".cell").css('display','none')
