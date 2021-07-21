@@ -66,6 +66,9 @@ const onCreateGameSuccess = (response) => {
   $(".selection-box").css('display', 'block')
   $(".game-status").css('display', 'block')
 }
+const onPlayGameSuccess = (response) => {
+  
+}
 const onFailure = (error) => {
   console.log(`Error, status: ${error.status}`)
   $("#message").text(`Error... status: ${error.status}`)

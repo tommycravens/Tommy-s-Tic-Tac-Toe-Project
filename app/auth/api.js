@@ -38,21 +38,21 @@ const createGame = function (data) {
     }
   })
 }
-// const playGame = (game) => {
-//   return $.ajax ({
-//     url: config.apiUrl + '/games/' + store.game._id,
-//     method: 'PATCH',
-//     data,
-//     headers: {
-//       Authorization: 'Bearer ' + store.token
-//     }
-//   })
-// }
+const playGame = (game) => {
+  return $.ajax ({
+    url: config.apiUrl + '/games/' + store.game._id,
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    }
+  })
+}
 //store with the token we created in curl
 module.exports = {
   signUp,
   signIn,
   signOut,
-  createGame
-  //playGame
+  createGame,
+  playGame
 }

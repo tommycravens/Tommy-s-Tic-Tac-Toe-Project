@@ -1,6 +1,7 @@
 const getFormFields = require("../../lib/get-form-fields")
 const api = require("./api")
 const ui = require("./ui")
+const store = require("./../store")
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -45,18 +46,23 @@ const onSignOut = function () {
 }
 const onCreateGame = function (event) {
   event.preventDefault()
+  const form = event.target
   api.createGame()
   .then(ui.onCreateGameSuccess)
   .catch(ui.onFailure)
 }
-// const updateGame = function () {
-//   console.log(store.token)
-//   return $.ajax({
-//     url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + store.game._id,
-//     method: 'PATCH',
-
-//   })
-// }
+const onPlayGame = function (event) {
+  event.preventDefault()
+  const click = event.target
+  const cellIndex = $(click).data("cell-index")
+  console.log(cellIndex)
+  console.log(store.game)
+  store.game.cells[cellIndex]
+  console.log(store.game.cells[cellIndex])
+  // api.playGame()
+  // .then(ui.onPlayGameSuccess)
+  // .catch(ui.onFailure)
+}
 
 
 
@@ -65,5 +71,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onCreateGame
+  onCreateGame,
+  onPlayGame
 }
