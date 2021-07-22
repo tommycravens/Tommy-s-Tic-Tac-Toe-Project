@@ -55,7 +55,8 @@ const onCreateGameSuccess = (response) => {
   $("#message").text(`Goodluck!`);
   store.game = response.game;
   console.log(store.game);
-  $("#create-game-header").css('display', 'block')
+  $("#create-game-header").css('display', 'none')
+  $("#create-game").css('display', 'none')
   $(".playerX").css('display', 'block')
   $(".playerO").css('display','block')
   $("#game-board").css('display', 'grid')

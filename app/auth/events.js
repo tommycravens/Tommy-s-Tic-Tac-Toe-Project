@@ -44,6 +44,7 @@ const onSignOut = function () {
   .then(ui.onSignOutSuccess)
   .catch(ui.onFailure)
 }
+// this is my start game button and brings up the game board and selection boxes
 const onCreateGame = function (event) {
   event.preventDefault()
   const form = event.target
@@ -51,6 +52,7 @@ const onCreateGame = function (event) {
   .then(ui.onCreateGameSuccess)
   .catch(ui.onFailure)
 }
+
 const onPlayGame = function (event) {
   event.preventDefault()
   const click = event.target
@@ -59,14 +61,26 @@ const onPlayGame = function (event) {
   console.log(store.game)
   store.game.cells[cellIndex]
   console.log(store.game.cells[cellIndex])
-  
+
   // api.playGame()
   // .then(ui.onPlayGameSuccess)
   // .catch(ui.onFailure)
 }
-//const onRestartGame {}
+
+// This will be how you choose x or o in the cells instead of the button idea that I was working with. It will also contain some of the game logic. 
+
+// const onCell = function (event) {
+
+//}
 
 
+//const onRestartGame = function (event) {
+
+//}
+
+// const onWinGame = function (event) {
+
+//}
 
 module.exports = {
   onSignUp,

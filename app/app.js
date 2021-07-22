@@ -12,7 +12,9 @@ $(() => {
   $("#sign-out").on("click", authEvents.onSignOut)
   $("#create-game").on("click", authEvents.onCreateGame)
   $(".cell").on("click", authEvents.onPlayGame)
-  $("#restart").on("click", authEvents.onRestart)
+
+  
+  //$("#restart").on("click", authEvents.onRestart)
   //$(".playerX").on("click", authEvents.onPlayerX)
   //$(".playerO").on("click", authEvents.onPlayerO)
 })

@@ -1,10 +1,11 @@
-
+// I want to change the formatting on my starts page with sign up and sign in. I think I want more of a middle page layout. 
 @import '~bootstrap/scss/bootstrap';
 $black: #000;
 body {
   background-color: #9BA17B;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  justify-content: center
+  justify-content: center;
+  text-align: center
 
 }
 
@@ -69,6 +70,9 @@ body {
   background-color: #9BA17B
 }
 #sign-out {
+  display: flex;
+  justify-content: center;
+  align: center;
   margin: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -76,7 +80,6 @@ body {
   border: 1px solid $black;
   border-radius: 2px;
   text-align: center;
-  display: center;
   background-color: #8da5ae;
   color: #FFFFFF;
   font-weight: bold;
