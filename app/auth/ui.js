@@ -48,7 +48,7 @@ const onSignOutSuccess = () => {
   $("#restart").css('display','none')
   $(".cell").css('display','none')
   $(".selection-box").css('display', 'none')
-  $(".game-status").css('display', 'none')
+  // $(".game-status").css('display', 'none')
 }
 
 const onCreateGameSuccess = (response) => {
@@ -64,10 +64,10 @@ const onCreateGameSuccess = (response) => {
   $(".cell").css('display','block')
   $("#selection-box-header").css('display', 'block')
   $(".selection-box").css('display', 'block')
-  $(".game-status").css('display', 'block')
+  // $(".game-status").css('display', 'block')
 }
 const onPlayGameSuccess = (response) => {
-  
+
 }
 const onFailure = (error) => {
   console.log(`Error, status: ${error.status}`)

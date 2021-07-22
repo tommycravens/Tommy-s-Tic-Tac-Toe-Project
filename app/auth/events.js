@@ -59,6 +59,7 @@ const onPlayGame = function (event) {
   console.log(store.game)
   store.game.cells[cellIndex]
   console.log(store.game.cells[cellIndex])
+  
   // api.playGame()
   // .then(ui.onPlayGameSuccess)
   // .catch(ui.onFailure)

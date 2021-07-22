@@ -277,21 +277,28 @@ h2 {
 .playerO:hover {
   background-color: #9BA17B
 }
-.game-status {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid $black;
-  border-radius: 2px;
-  text-align: center;
-  background-color: #FA8072;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 100%;
-  text-shadow: 4px 4px #000000
-}
-.game-status span {
-  color: #66FF00;
-  font-size: 110%
-}
+
+
+
+
+
+
+//Game status has been taken out for the moment. IDK if I need player x and o set up this way either. I feel a little confused as to how I want to attack filling in my board.
+// .game-status {
+//   display: flex;
+//   justify-content: center;
+//   margin: 10px;
+//   padding: 10px;
+//   border: 1px solid $black;
+//   border-radius: 2px;
+//   text-align: center;
+//   background-color: #FA8072;
+//   color: #FFFFFF;
+//   font-weight: 700;
+//   font-size: 100%;
+//   text-shadow: 4px 4px #000000
+// }
+// .game-status span {
+//   color: #66FF00;
+//   font-size: 110%
+// }
