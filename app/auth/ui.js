@@ -52,7 +52,7 @@ const onSignOutSuccess = () => {
 }
 
 const onCreateGameSuccess = (response) => {
-  $("#message").text(`Goodluck on your game!`);
+  $("#message").text(`Game has started: Goodluck!`);
   store.game = response.game;
   console.log(store.game);
   $("#create-game-header").css('display', 'none')
