@@ -15,20 +15,21 @@
       <h1 id="sign-up-header" style="display:block">Can you outsmart the computer in Tic-Tac-Toe? Sign up here!</h1>
       <!-- sign up -->
         <form id="sign-up-form">
-          <label>Email</label>
+          <label>Email:</label>
           <input name="credentials[email]" type="email">
-          <label>Password</label>
+          <label>Password:</label>
           <input name="credentials[password]" type="password">
-          <label>Password Confirmation</label>
+          <label>Password Confirmation:</label>
           <input name="credentials[password_confirmation]" type="password">
           <input id="sign-up" type="submit" value="Sign Up">
         </form>
+        <p id="message"></p>
         <!-- sign in -->
         <h2 id="sign-in-header" style="display:block">Back Again? See if your skills have sharpened!</h2>
         <form id="sign-in-form" style="display:block">
-          <label>Email</label>
+          <label>Email:</label>
           <input name="credentials[email]" type="email">
-          <label>Password</label>
+          <label>Password:</label>
           <input name="credentials[password]" type="password">
           <input id="sign-in" type="submit" value="Sign In">
         </form>
@@ -36,20 +37,21 @@
 <!-- Start of game-board, selection box, start game button  -->
         <h2 id="create-game-header" style="display:none"> New Game! </h2>
         <button id="create-game" type="button" style="display:none" >
-          START GAME
+          START NEW GAME
         </button>
         <div class="selection-box" style="display:none">
           <h2 id="selection-box-header" style="display:none"> Tic-<span>Tac</span>-Toe </h2>
-          <div id="game-content" style="display:none">
-            <div class="title" style="display:none">Choose your side</div>
-            <div class="choices">
-              <button class="playerX" type= "button" style="display:none">Player(X) </button>
-              <button class="playerO" type="button" style="display:none">Player(O) </button>
-              <button id="restart" style="display:none">Restart</button>
-            </div>
-          </div>
         </div>
-
+          <!-- <div id="game-content" style="display:none">
+            <div class="title" style="display:none">Choose your side</div> -- -->
+            <!-- <div class="choices"> -->
+              <!-- <button class="playerX" type= "button" style="display:none">Player(X) </button>
+              <button class="playerO" type="button" style="display:none">Player(O) </button> -->
+              <!-- <button id="restart" style="display:none">Restart</button> -->
+            <!-- </div>
+          </div>
+        </div> -->
+  
 
         <div id="game-board" style="display:none">
           <div class="row row-cols-3">

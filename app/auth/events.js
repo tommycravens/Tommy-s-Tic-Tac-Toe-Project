@@ -2,6 +2,9 @@ const getFormFields = require("../../lib/get-form-fields")
 const api = require("./api")
 const ui = require("./ui")
 const store = require("./../store")
+let turn = true
+
+
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -55,38 +58,46 @@ const onCreateGame = function (event) {
 
 const onPlayGame = function (event) {
   event.preventDefault()
-  const click = event.target
-  const cellIndex = $(click).data("cell-index")
-  console.log(cellIndex)
-  console.log(store.game)
-  store.game.cells[cellIndex]
-  console.log(store.game.cells[cellIndex])
-
-  // api.playGame()
-  // .then(ui.onPlayGameSuccess)
-  // .catch(ui.onFailure)
+  const cell = event.target
+  const cellIndex = $(cell).data("cell-index")
+  const player = turn ? 'x' : 'o'
+  if ($(cell).text()) return
+  $(cell).text(player)
+  const game = {
+    game: {
+      cell: {
+        index: cellIndex,
+        value: player
+      },
+      over: false 
+    }
+  }
+  api.playGame(game)
+  .then(ui.onPlayGameSuccess)
+  .catch(ui.onFailure)
+turn = !turn
+return turn
 }
+ 
 
-// This will be how you choose x or o in the cells instead of the button idea that I was working with. It will also contain some of the game logic. 
+// let currentPlayer = 'x'
+// const onGameBoardClick = (event) => {
+//   event.preventDefault()
+//   console.log('click')     
+//   const gameBoard = $(event.target)
+//   gameBoard.text(currentPlayer)
+//   currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
+// }
 
-// const onCell = function (event) {
 
+  //const onRestartGame = function (event) {
 //}
-
-
-//const onRestartGame = function (event) {
-
-//}
-
-// const onWinGame = function (event) {
-
-//}
-
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onCreateGame,
   onPlayGame
+  // onGameBoardClick
   //onRestartGame
 }

@@ -42,7 +42,7 @@ const playGame = (game) => {
   return $.ajax ({
     url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
-    data,
+    data: game,
     headers: {
       Authorization: 'Bearer ' + store.token
     }

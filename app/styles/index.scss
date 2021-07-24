@@ -1,11 +1,12 @@
 // I want to change the formatting on my starts page with sign up and sign in. I think I want more of a middle page layout. 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap');
 @import '~bootstrap/scss/bootstrap';
 $black: #000;
 body {
   background-color: #9BA17B;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Playfair Display', serif;
   justify-content: center;
-  text-align: center
+  text-align: center;
 
 }
 
@@ -25,7 +26,8 @@ body {
   margin: 15px;
   padding: 15px;
   background-color: #FA8072;
-  border-radius: 10px
+  border-radius: 10px;
+  font-size: 100%;
 }
 #sign-up {
   margin: 5px;
@@ -104,7 +106,7 @@ body {
 
 // I want to add better fonts here, but this was just vscode already and easy to add in with out importing any font families from google.
 h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Playfair Display', serif;
   color: #FFFFFF;
   text-shadow: 4px 4px #000000;
   display: flex;
@@ -112,7 +114,7 @@ h1 {
   align: center
 }
 h2 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Playfair Display', serif;
   color: #FFFFFF;
   text-shadow: 4px 4px #000000;
   display: flex;
@@ -150,11 +152,16 @@ h2 {
   justify-content: center;
   align-items: center;
   line-height: 100px;
-  border-radius: 10px
+  border-radius: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 250%;
+  text-align: center;
+  color: #9BA17B;
 }
 .cell:hover {
   background-color: #FA8072
 }
+
 .row.row-cols-3 {
   display: flex;
   flex-wrap: wrap;
@@ -194,23 +201,23 @@ h2 {
   font-size: 150%
 }
 
-#restart {
-  display: flex;
-  justify-content: flex-end;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid $black;
-  border-radius: 2px;
-  text-align: center;
-  background-color: #FA8072;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 100%;
-  text-shadow: 3px 3px #000000
-}
-#restart:hover {
-  background-color: #9BA17B
-}
+// #restart {
+//   display: flex;
+//   justify-content: flex-end;
+//   margin: 10px;
+//   padding: 10px;
+//   border: 1px solid $black;
+//   border-radius: 2px;
+//   text-align: center;
+//   background-color: #FA8072;
+//   color: #FFFFFF;
+//   font-weight: bold;
+//   font-size: 100%;
+//   text-shadow: 3px 3px #000000
+// }
+// #restart:hover {
+//   background-color: #9BA17B
+// }
 #create-game-header {
   margin: 20px;
   padding: 20px;
@@ -246,40 +253,40 @@ h2 {
   justify-content: center;
   align: center
 }
-.playerX {
- display: flex;
- justify-content: center;
- margin: 10px;
- padding: 10px;
- border: 1px solid $black;
- border-radius: 2px;
- text-align: center;
- background-color: #FA8072;
- color: #FFFFFF;
- font-weight: 700;
- font-size: 100%;
- text-shadow: 4px 4px #000000
-}
-.playerX:hover {
-  background-color: #9BA17B
-}
-.playerO {
- display: flex;
- justify-content: center;
- margin: 10px;
- padding: 10px;
- border: 1px solid $black;
- border-radius: 2px;
- text-align: center;
- background-color: #FA8072;
- color: #FFFFFF;
- font-weight: 700;
- font-size: 100%;
- text-shadow: 4px 4px #000000
-}
-.playerO:hover {
-  background-color: #9BA17B
-}
+// .playerX {
+//  display: flex;
+//  justify-content: center;
+//  margin: 10px;
+//  padding: 10px;
+//  border: 1px solid $black;
+//  border-radius: 2px;
+//  text-align: center;
+//  background-color: #FA8072;
+//  color: #FFFFFF;
+//  font-weight: 700;
+//  font-size: 100%;
+//  text-shadow: 4px 4px #000000
+// }
+// .playerX:hover {
+//   background-color: #9BA17B
+// }
+// .playerO {
+//  display: flex;
+//  justify-content: center;
+//  margin: 10px;
+//  padding: 10px;
+//  border: 1px solid $black;
+//  border-radius: 2px;
+//  text-align: center;
+//  background-color: #FA8072;
+//  color: #FFFFFF;
+//  font-weight: 700;
+//  font-size: 100%;
+//  text-shadow: 4px 4px #000000
+// }
+// .playerO:hover {
+//   background-color: #9BA17B
+// }
 
 
 
