@@ -61,6 +61,8 @@ const onPlayGame = function (event) {
   const cell = event.target
   const cellIndex = $(cell).data("cell-index")
   const player = turn ? 'x' : 'o'
+  store.game.over = onWinGame()
+  if (store.game.over) return
   if ($(cell).text()) return
   $(cell).text(player)
   const game = {
@@ -69,7 +71,7 @@ const onPlayGame = function (event) {
         index: cellIndex,
         value: player
       },
-      over: false 
+      over: store.game.over
     }
   }
   api.playGame(game)
@@ -78,20 +80,51 @@ const onPlayGame = function (event) {
 turn = !turn
 return turn
 }
- 
 
-// let currentPlayer = 'x'
-// const onGameBoardClick = (event) => {
-//   event.preventDefault()
-//   console.log('click')     
-//   const gameBoard = $(event.target)
-//   gameBoard.text(currentPlayer)
-//   currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-// }
+const onWinGame = function () {
+  const cells = store.game.cells
+  const player = turn ? 'x' : 'o'
+  if (cells[0] === cells[1] && cells[0] === cells[2] && cells[0] !== '') {
+    store.winner = player
+    return true
+  }
+  if (cells[1] === cells[4] && cells[1] === cells[7] && cells[1] !== '') {
+     store.winner = player
+     return true
+   }
+  if (cells[2] === cells[5] && cells[2] === cells[8] && cells[2] !== '') {
+      store.winner = player
+      return true
+    }
+  if (cells[3] === cells[1] && cells[0] === cells[2] && cells[0] !== '') {
+       store.winner = player
+       return true
+     }
+  if (cells[0] === cells[3] && cells[0] === cells[6] && cells[0] !== '') {
+    store.winner = player
+    return true
+    }
+  if (cells[0] === cells[4] && cells[0] === cells[8] && cells[0] !== ''){
+    store.winner = player
+  return true
+  }
+ if (cells[6] === cells[7] && cells[6] === cells[8] && cells[6] !== '') {
+   store.winner = player
+   return true
+ }
+  if (cells[2] === cells[4] && cells[2] === cells[6] && cells[2] !== '') {
+    store.winner = player
+    return true
+  }
+
+  return false
+}
 
 
   //const onRestartGame = function (event) {
 //}
+
+//$(cell).text('')
 module.exports = {
   onSignUp,
   onSignIn,

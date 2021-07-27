@@ -52,9 +52,9 @@ const onSignOutSuccess = () => {
 }
 
 const onCreateGameSuccess = (response) => {
-  $("#message").text(`Game has started: Goodluck!`);
-  store.game = response.game;
-  console.log(store.game);
+  $("#message").text(`Game has started: Goodluck!`)
+  store.game = response.game
+  console.log(store.game)
   $("#create-game-header").css('display', 'none')
   $("#create-game").css('display', 'block')
   $(".playerX").css('display', 'block')
@@ -66,15 +66,21 @@ const onCreateGameSuccess = (response) => {
   $("#selection-box-header").css('display', 'block')
   $(".selection-box").css('display', 'block')
   // $(".game-status").css('display', 'block')
+  $('.cell').text('')
 }
 const onPlayGameSuccess = (response) => {
+  $('#message').text(`Game in progress.`)
 store.game = response.game
+console.log(store.game)
 }
-// const onWinGame = (response) => {
-// $("#message").text(`Great Work !`)
-    //if onPlayGame != onWinGame
-    // console.log($("message").text(`Better Luck Next Time !`)) 
+// const onWinGameSuccess = (winner) => {
+//   $("#message").text(`Great Work !`)
+// //     if onPlayGame != onWinGame
+// //     console.log($("message").text(`Better Luck Next Time !`))
+// store.game = winner.player
+// console.log(store.winner)
 // }
+
 const onFailure = (error) => {
   console.log(`Error, status: ${error.status}`)
   $("#message").text(`Error... status: ${error.status}`)
@@ -86,5 +92,6 @@ module.exports = {
   onFailure,
   onSignInSuccess,
   onSignOutSuccess,
-  onCreateGameSuccess
+  onCreateGameSuccess,
+  onPlayGameSuccess
 }
