@@ -116,6 +116,10 @@ const onWinGame = function () {
     store.winner = player
     return true
   }
+  if (cells[3] === cells[4] && cells[3] === cells[5] && cells[2] !== "") {
+    store.winner = player;
+    return true;
+  }
 
   return false
 }
