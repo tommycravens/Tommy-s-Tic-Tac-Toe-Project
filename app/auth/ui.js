@@ -50,6 +50,7 @@ const onSignOutSuccess = () => {
 const onCreateGameSuccess = (response) => {
   $("#message").text(`Game has started: Goodluck!`)
   store.game = response.game
+  store.tied = false
   console.log(store.game)
   $("#create-game-header").css('display', 'none')
   $("#create-game").css('display', 'block')
@@ -63,8 +64,16 @@ const onPlayGameSuccess = (response) => {
   $('#message').text(`Game in progress.`)
 store.game = response.game
 if (store.game.over) {
-  $('#message').text(`Great Work, You Win!`)
+  if (store.tied) {
+    $("#message").text("It's a tie!")
+  } else {
+    $("#message").text(`'${store.winner}' is the winner !`)
+  }
+
 }
+// else (store.game.over) {
+//   $("#message").text("It's a tie!")
+// }
 console.log(response.game)
 }
 // const onWinGameSuccess = (response) => {
@@ -88,5 +97,4 @@ module.exports = {
   onSignOutSuccess,
   onCreateGameSuccess,
   onPlayGameSuccess
-  // onWinGameSuccess
 }

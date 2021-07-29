@@ -118,7 +118,12 @@ const onWinGame = function () {
     store.winner = player
     return true
   }
-  // if statement logic for a tie
+  if (cells.every(cell => cell !== '')) {
+    store.tied = true
+    return true
+}
+
+  // if statement logic for a tie; would it be if all cells are full there is no winner its a tie or if store.game.over and there is no winner then it is a tie
   // if ()
 
 // how do I send a message of if you won or tied?
