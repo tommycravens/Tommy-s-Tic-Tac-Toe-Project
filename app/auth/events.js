@@ -51,19 +51,21 @@ const onSignOut = function () {
 const onCreateGame = function (event) {
   event.preventDefault()
   const form = event.target
+  turn = true
   api.createGame()
   .then(ui.onCreateGameSuccess)
   .catch(ui.onFailure)
 }
-
+// this creates the text of x and o in the cells on the click event switching b/w x and o using turns.
 const onPlayGame = function (event) {
   event.preventDefault()
   const cell = event.target
   const cellIndex = $(cell).data("cell-index")
-  const player = turn ? 'x' : 'o'
-  store.game.over = onWinGame()
   if (store.game.over) return
   if ($(cell).text()) return
+  const player = turn ? "x" : "o"
+  store.game.cells[cellIndex] = player
+  store.game.over = onWinGame()
   $(cell).text(player)
   const game = {
     game: {
@@ -80,7 +82,7 @@ const onPlayGame = function (event) {
 turn = !turn
 return turn
 }
-
+// All the different ways you can win the game
 const onWinGame = function () {
   const cells = store.game.cells
   const player = turn ? 'x' : 'o'
@@ -96,10 +98,6 @@ const onWinGame = function () {
       store.winner = player
       return true
     }
-  if (cells[3] === cells[1] && cells[0] === cells[2] && cells[0] !== '') {
-       store.winner = player
-       return true
-     }
   if (cells[0] === cells[3] && cells[0] === cells[6] && cells[0] !== '') {
     store.winner = player
     return true
@@ -120,13 +118,14 @@ const onWinGame = function () {
     store.winner = player
     return true
   }
+  // if statement logic for a tie
+  // if ()
 
+// how do I send a message of if you won or tied?
   return false
 }
 
 
-  //const onRestartGame = function (event) {
-//}
 
 //$(cell).text('')
 module.exports = {

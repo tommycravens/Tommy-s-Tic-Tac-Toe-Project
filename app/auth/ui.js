@@ -27,8 +27,6 @@ const onSignInSuccess = (response) => {
   // $("#create-game-header").css('display', 'block')
   // $("#selection-box-header").css('display', 'block')
   // $("#game-board").css('display', 'block')
-  // $("#game-content").css('display', 'block')
-  // $("#restart").css('display','block')
   // $(".cell").css('display','block')
 }
 const onSignOutSuccess = () => {
@@ -45,10 +43,8 @@ const onSignOutSuccess = () => {
   $("#selection-box-header").css('display', 'none')
   $("#game-board").css('display', 'none')
   $("#game-content").css('display', 'none')
-  // $("#restart").css('display','none')
   $(".cell").css('display','none')
   $(".selection-box").css('display', 'none')
-  // $(".game-status").css('display', 'none')
 }
 
 const onCreateGameSuccess = (response) => {
@@ -57,23 +53,21 @@ const onCreateGameSuccess = (response) => {
   console.log(store.game)
   $("#create-game-header").css('display', 'none')
   $("#create-game").css('display', 'block')
-  $(".playerX").css('display', 'block')
-  $(".playerO").css('display','block')
   $("#game-board").css('display', 'grid')
-  $("#game-content").css('display', 'block')
-  // $("#restart").css('display','block')
   $(".cell").css('display','block')
   $("#selection-box-header").css('display', 'block')
   $(".selection-box").css('display', 'block')
-  // $(".game-status").css('display', 'block')
   $('.cell').text('')
 }
 const onPlayGameSuccess = (response) => {
   $('#message').text(`Game in progress.`)
 store.game = response.game
-console.log(store.game)
+if (store.game.over) {
+  $('#message').text(`Great Work, You Win!`)
 }
-// const onWinGameSuccess = (winner) => {
+console.log(response.game)
+}
+// const onWinGameSuccess = (response) => {
 //   $("#message").text(`Great Work !`)
 // //     if onPlayGame != onWinGame
 // //     console.log($("message").text(`Better Luck Next Time !`))
@@ -94,4 +88,5 @@ module.exports = {
   onSignOutSuccess,
   onCreateGameSuccess,
   onPlayGameSuccess
+  // onWinGameSuccess
 }
