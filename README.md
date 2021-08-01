@@ -6,7 +6,7 @@
 
 <h2>Repository link:</h2> https://github.com/tommycravens/Tommy-s-Tic-Tac-Toe-Project
 
-<h2>Wire-frames:</h2>
+<h2>Wire-frames:</h2> https://lucid.app/lucidchart/invitations/accept/inv_d9f5eeb7-9e4b-4a32-8fd5-7336b2715a92?viewport_loc=-135%2C818%2C1441%2C625%2C0_0
 
 
 <h2>Technologies Used:</h2>
