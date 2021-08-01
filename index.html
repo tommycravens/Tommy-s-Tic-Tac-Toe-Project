@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tommy's Tic-Tac-Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <h1 id="sign-up-header" style="display:block">Can you outsmart the computer in Tic-Tac-Toe? Sign up here!</h1>
+
+      <!-- sign up -->
+        <form id="sign-up-form">
+          <label>Email:</label>
+          <input name="credentials[email]" type="email">
+          <label>Password:</label>
+          <input name="credentials[password]" type="password">
+          <label>Password Confirmation:</label>
+          <input name="credentials[password_confirmation]" type="password">
+          <input id="sign-up" type="submit" value="Sign Up">
+        </form>
+
+        <p id="message"></p>
+
+        <!-- sign in -->
+        <h2 id="sign-in-header" style="display:block">Back Again? See if your skills have sharpened!</h2>
+        <form id="sign-in-form" style="display:block">
+          <label>Email:</label>
+          <input name="credentials[email]" type="email">
+          <label>Password:</label>
+          <input name="credentials[password]" type="password">
+          <input id="sign-in" type="submit" value="Sign In">
+        </form>
+
+<!-- Start of game-board, selection box, start game button  -->
+        <h2 id="create-game-header" style="display:none"> New Game! </h2>
+        <button id="create-game" type="button" style="display:none" >
+          START NEW GAME
+        </button>
+        <div class="selection-box" style="display:none">
+          <h2 id="selection-box-header" style="display:none"> Tic-<span>Tac</span>-Toe </h2>
+        </div>
+
+        <div id="game-board" style="display:none">
+          <div class="row row-cols-3">
+          <div data-cell-index="0" class="cell" style="display:none"></div>
+          <div data-cell-index="1" class="cell" style="display:none"></div>
+          <div data-cell-index="2" class="cell" style="display:none"></div>
+          <div data-cell-index="3" class="cell" style="display:none"></div>
+          <div data-cell-index="4" class="cell" style="display:none"></div>
+          <div data-cell-index="5" class="cell" style="display:none"></div>
+          <div data-cell-index="6" class="cell" style="display:none"></div>
+          <div data-cell-index="7" class="cell" style="display:none"></div>
+          <div data-cell-index="8" class="cell" style="display:none"></div>
+          </div>
+          </div>
+
+        <!-- <div class="game-components">
+          <div class="game-turns">
+            <div class="players">
+            </div>
+          </div>
+        </div> -->
+        <h2 id="sign-out-header" style="display:none">Want to Sign Out?</h2>
+        <button id="sign-out" type="button" style="display:none">
+          Sign Out
+        </button>
+
+        <!-- <div class="winning-message" > </div> -->
+    </body>
+</html>
